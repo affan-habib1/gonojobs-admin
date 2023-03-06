@@ -34,6 +34,7 @@ function DataGridTableCustom({
             {gridTitle && (
               <Button
                 variant="contained"
+                size="small"
                 sx={{ textTransform: "uppercase", color: "white" }}
               >
                 {gridTitle}
@@ -45,9 +46,9 @@ function DataGridTableCustom({
               spacing={2}
             >
               <>
-                <GridToolbarQuickFilter variant="outlined" />
-                <GridToolbarFilterButton variant="outlined" />
-                <GridToolbarExport variant="outlined" />
+                <GridToolbarQuickFilter variant="outlined" size="small" />
+                <GridToolbarFilterButton variant="outlined" size="small" />
+                <GridToolbarExport variant="outlined" size="small" />
                 {actionbutton}
               </>
             </Stack>
