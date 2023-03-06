@@ -29,19 +29,18 @@ const icons = {
 
 // ==============================|| MENU ITEMS - SUPPORT ||============================== //
 
-const other = {
-  id: 'other',
-  title: <FormattedMessage id="others" />,
+const products = {
+  id: 'products',
   type: 'group',
   children: [
     {
-      id: 'sample-page',
-      title: <FormattedMessage id="sample-page" />,
+      id: 'products',
+      title: <FormattedMessage id="products" />,
       type: 'item',
-      url: '/sample-page',
+      url: '/products',
       icon: icons.ChromeOutlined
     },
   ]
 };
 
-export default other;
+export default products;

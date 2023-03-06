@@ -7,7 +7,7 @@ import AuthGuard from 'utils/route-guard/AuthGuard';
 
 
 // render - sample page
-const SamplePage = Loadable(lazy(() => import('pages/extra-pages/sample-page')));
+const Products = Loadable(lazy(() => import('pages/products/Products')));
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -23,8 +23,8 @@ const MainRoutes = {
       ),
       children: [
         {
-          path: 'sample-page',
-          element: <SamplePage />
+          path: 'products',
+          element: <Products />
         }
       ]
     },

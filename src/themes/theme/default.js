@@ -1,9 +1,7 @@
-import PropTypes from 'prop-types';
+// ==============================|| PRESET THEME - Default Green ||============================== //
 
-// ==============================|| PRESET THEME - DEFAULT ||============================== //
-
-const Default = (colors) => {
-  const { blue, red, gold, cyan, green, grey } = colors;
+const Default = (colors, mode) => {
+  const { grey } = colors;
   const greyColors = {
     0: grey[0],
     50: grey[1],
@@ -25,18 +23,32 @@ const Default = (colors) => {
   };
   const contrastText = '#fff';
 
+  let primaryColors = ['#d1e8d99c', '#8cdba9', '#63cf8e', '#3ec277', '#1db564', '#00a854', '#008245', '#005c34', '#003620', '#000f0a'];
+  let errorColors = ['#FDE8E7', '#F25E52', '#F04134', '#EE3B2F', '#E92A21'];
+  let warningColors = ['#FFF7E0', '#FFC926', '#FFBF00', '#FFB900', '#FFA900'];
+  let infoColors = ['#E0F4F5', '#26B0BA', '#00A2AE', '#009AA7', '#008694'];
+  let successColors = ['#E0F5EA', '#26B56E', '#00A854', '#00A04D', '#008D3A'];
+
+  if (mode === 'dark') {
+    primaryColors = ['#1a2721', '#173728', '#15472e', '#115c36', '#0b7841', '#05934c', '#1da65d', '#3cba73', '#61ca8b', '#8ad7a6'];
+    errorColors = ['#321d1d', '#7d2e28', '#d13c31', '#e66859', '#f8baaf'];
+    warningColors = ['#342c1a', '#836611', '#dda705', '#e9bf28', '#f8e577'];
+    infoColors = ['#1a2628', '#11595f', '#058e98', '#1ea6aa', '#64cfcb'];
+    successColors = ['#1a2721', '#115c36', '#05934c', '#1da65d', '#61ca8b'];
+  }
+
   return {
     primary: {
-      lighter: blue[0],
-      100: blue[1],
-      200: blue[2],
-      light: blue[3],
-      400: blue[4],
-      main: blue[5],
-      dark: blue[6],
-      700: blue[7],
-      darker: blue[8],
-      900: blue[9],
+      lighter: primaryColors[0],
+      100: primaryColors[1],
+      200: primaryColors[2],
+      light: primaryColors[3],
+      400: primaryColors[4],
+      main: primaryColors[5],
+      dark: primaryColors[6],
+      700: primaryColors[7],
+      darker: primaryColors[8],
+      900: primaryColors[9],
       contrastText
     },
     secondary: {
@@ -56,43 +68,39 @@ const Default = (colors) => {
       contrastText: greyColors[0]
     },
     error: {
-      lighter: red[0],
-      light: red[2],
-      main: red[4],
-      dark: red[7],
-      darker: red[9],
+      lighter: errorColors[0],
+      light: errorColors[1],
+      main: errorColors[2],
+      dark: errorColors[3],
+      darker: errorColors[4],
       contrastText
     },
     warning: {
-      lighter: gold[0],
-      light: gold[3],
-      main: gold[5],
-      dark: gold[7],
-      darker: gold[9],
+      lighter: warningColors[0],
+      light: warningColors[1],
+      main: warningColors[2],
+      dark: warningColors[3],
+      darker: warningColors[4],
       contrastText: greyColors[100]
     },
     info: {
-      lighter: cyan[0],
-      light: cyan[3],
-      main: cyan[5],
-      dark: cyan[7],
-      darker: cyan[9],
+      lighter: infoColors[0],
+      light: infoColors[1],
+      main: infoColors[2],
+      dark: infoColors[3],
+      darker: infoColors[4],
       contrastText
     },
     success: {
-      lighter: green[0],
-      light: green[3],
-      main: green[5],
-      dark: green[7],
-      darker: green[9],
+      lighter: successColors[0],
+      light: successColors[1],
+      main: successColors[2],
+      dark: successColors[3],
+      darker: successColors[4],
       contrastText
     },
     grey: greyColors
   };
-};
-
-Default.propTypes = {
-  colors: PropTypes.object
 };
 
 export default Default;

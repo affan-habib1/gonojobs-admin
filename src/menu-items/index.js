@@ -1,10 +1,10 @@
 // project import
-import other from './other';
+import products from './products';
 
 // ==============================|| MENU ITEMS ||============================== //
 
 const menuItems = {
-  items: [other]
+  items: [products]
 };
 
 export default menuItems;
