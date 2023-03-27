@@ -56,7 +56,7 @@ const MainLayout = () => {
         <Toolbar />
         {container && (
           <Container
-            maxWidth="xl"
+            maxWidth="xxl"
             sx={{ px: { xs: 0, sm: 2, md: 0 }, position: 'relative', minHeight: 'calc(100vh - 110px)', display: 'flex', flexDirection: 'column' }}
           >
             {/* <Breadcrumbs navigation={navigation} title titleBottom card={false} divider={false} /> */}
