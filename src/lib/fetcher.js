@@ -1,4 +1,4 @@
-const baseUrl = "localhost:5000";
+const baseUrl = "13.212.68.212:5001/api/v1";
 const protocol = process.env.REACT_APP_API_PROTOCOL || 'http';
 
 const fetcher = async (route, options = {}) => {
