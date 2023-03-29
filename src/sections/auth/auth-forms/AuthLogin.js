@@ -32,6 +32,7 @@ import AnimateButton from "components/@extended/AnimateButton";
 import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
 import { callApi } from "store/reducers/apiSlice";
 import { useDispatch } from "react-redux";
+import { UrlBuilder } from "./../../../helpers/UrlBuilder";
 
 // ============================|| FIREBASE - LOGIN ||============================ //
 
@@ -74,7 +75,7 @@ const AuthLogin = () => {
           try {
             dispatch(
               callApi({
-                operationId: "core/user/login",
+                operationId: UrlBuilder.coreServiceApi("core/user/login"),
                 output: "authData",
                 parameters: {
                   method: "POST",

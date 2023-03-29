@@ -38,9 +38,9 @@ const employer = {
     },
     {
       id: "employer",
-      title: "JOBS",
+      title: "Post Job",
       type: "item",
-      url: "/employer",
+      url: "/new-job",
       icon: icons.ChromeOutlined,
     },
   ],
