@@ -1,7 +1,3 @@
-// third-party
-import { FormattedMessage } from "react-intl";
-
-// assets
 import {
   BorderOutlined,
   BoxPlotOutlined,
@@ -29,18 +25,25 @@ const icons = {
 
 // ==============================|| MENU ITEMS - SUPPORT ||============================== //
 
-const products = {
-  id: "products",
+const employer = {
+  id: "employer",
   type: "group",
   children: [
     {
-      id: "products",
-      title: <FormattedMessage id="Dashboard" />,
+      id: "dashboard",
+      title: "Dashboard",
       type: "item",
-      url: "/products",
+      url: "/dashboard",
+      icon: icons.ChromeOutlined,
+    },
+    {
+      id: "employer",
+      title: "JOBS",
+      type: "item",
+      url: "/employer",
       icon: icons.ChromeOutlined,
     },
   ],
 };
 
-export default products;
+export default employer;

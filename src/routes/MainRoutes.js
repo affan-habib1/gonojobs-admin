@@ -1,21 +1,20 @@
-import { lazy } from 'react';
+import { lazy } from "react";
 
 // project import
-import MainLayout from 'layout/MainLayout';
-import Loadable from 'components/Loadable';
-import AuthGuard from 'utils/route-guard/AuthGuard';
-
+import MainLayout from "layout/MainLayout";
+import Loadable from "components/Loadable";
+import AuthGuard from "utils/route-guard/AuthGuard";
 
 // render - sample page
-const Products = Loadable(lazy(() => import('pages/products/Products')));
+const Dashboard = Loadable(lazy(() => import("pages/dashboard/Dashboard")));
 
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
-  path: '/',
+  path: "/",
   children: [
     {
-      path: '/',
+      path: "/",
       element: (
         <AuthGuard>
           <MainLayout />
@@ -23,12 +22,12 @@ const MainRoutes = {
       ),
       children: [
         {
-          path: 'products',
-          element: <Products />
-        }
-      ]
+          path: "dashboard",
+          element: <Dashboard />,
+        },
+      ],
     },
-  ]
+  ],
 };
 
 export default MainRoutes;
