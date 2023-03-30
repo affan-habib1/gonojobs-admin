@@ -24,7 +24,6 @@ import { Formik } from "formik";
 // project import
 import useAuth from "hooks/useAuth";
 import useScriptRef from "hooks/useScriptRef";
-import FirebaseSocial from "./FirebaseSocial";
 import IconButton from "components/@extended/IconButton";
 import AnimateButton from "components/@extended/AnimateButton";
 
@@ -41,7 +40,7 @@ const AuthLogin = () => {
   const [checked, setChecked] = React.useState(false);
   const [capsWarning, setCapsWarning] = React.useState(false);
 
-  const { isLoggedIn, firebaseEmailPasswordSignIn } = useAuth();
+  const { isLoggedIn } = useAuth();
   const scriptedRef = useScriptRef();
 
   const [showPassword, setShowPassword] = React.useState(false);

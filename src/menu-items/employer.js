@@ -37,10 +37,10 @@ const employer = {
       icon: icons.ChromeOutlined,
     },
     {
-      id: "employer",
-      title: "Post Job",
+      id: "users",
+      title: "Users",
       type: "item",
-      url: "/new-job",
+      url: "/users",
       icon: icons.ChromeOutlined,
     },
   ],

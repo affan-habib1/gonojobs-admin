@@ -1,10 +1,9 @@
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // material-ui
 import { Grid, Stack, Typography } from "@mui/material";
 
 // project import
-import useAuth from "hooks/useAuth";
 import AuthWrapper from "sections/auth/AuthWrapper";
 import AuthLogin from "sections/auth/auth-forms/AuthLogin";
 import { useSelector } from "react-redux";
@@ -15,7 +14,8 @@ import Cookies from "js-cookie";
 // ================================|| LOGIN ||================================ //
 
 const Login = () => {
-  const { isLoggedIn } = useAuth();
+  const isLoggedIn = Cookies.get("access_token") ? true : false;
+  // console.log(isLoggedIn, "ssss")
 
   const {
     loading,
@@ -24,7 +24,6 @@ const Login = () => {
     },
   } = useSelector(selectApi);
 
-  console.log(authData.data.access_token, "ss");
 
   const navigate = useNavigate();
   useEffect(() => {
